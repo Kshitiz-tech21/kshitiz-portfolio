@@ -227,7 +227,19 @@ export default function Home() {
       {/* Education Section */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-slate-900">Education</h2>
+          <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4">
+            <h2 className="text-3xl font-bold text-slate-900">Education & Credentials</h2>
+            <a 
+              href="/resume.pdf" 
+              target="_blank" 
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-bold rounded-lg hover:bg-blue-700 transition-all shadow-sm"
+            >
+              Download Full Resume
+              <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </a>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {EDUCATION.map((edu, idx) => (
               <div key={idx} className="p-8 rounded-2xl border border-slate-200 bg-white hover:shadow-sm transition-shadow">
